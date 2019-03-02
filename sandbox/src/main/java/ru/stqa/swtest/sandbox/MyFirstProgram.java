@@ -1,3 +1,5 @@
+package ru.stqa.swtest.sandbox;
+
 public class MyFirstProgram {
 
 
