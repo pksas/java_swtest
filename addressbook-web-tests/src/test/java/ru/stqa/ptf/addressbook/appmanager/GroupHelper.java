@@ -4,44 +4,37 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.ptf.addressbook.model.GroupData;
 
-public class GroupHelper {
-  private WebDriver wd;
+public class GroupHelper extends HelperBase{
 
   public GroupHelper(WebDriver wd) {
-    this.wd = wd;
+    super(wd);
   }
 
   public void returntoGroupPage() {
-    wd.findElement(By.linkText("Logout")).click();
+    click(By.linkText("Logout"));
   }
 
   public void submitGroupCreation() {
-    wd.findElement(By.linkText("group page")).click();
+    click(By.linkText("group page"));
   }
 
   public void fillGroupForm(GroupData groupData) {
-    wd.findElement(By.name("group_name")).click();
-    wd.findElement(By.name("group_name")).clear();
-    wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
-    wd.findElement(By.name("group_header")).click();
-    wd.findElement(By.name("group_header")).clear();
-    wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
-    wd.findElement(By.name("group_footer")).click();
-    wd.findElement(By.name("group_footer")).clear();
-    wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
-    wd.findElement(By.name("submit")).click();
-    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groups'])[1]/following::div[1]")).click();
+    type(By.name("group_name"), groupData.getName());
+    type(By.name("group_header"), groupData.getHeader());
+    type(By.name("group_footer"), groupData.getFooter());
+    click(By.name("submit"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groups'])[1]/following::div[1]"));
   }
 
   public void initGroupCreation() {
-    wd.findElement(By.name("new")).click();
+    click(By.name("new"));
   }
 
   public void deleyeSelectedGroups() {
-    wd.findElement(By.name("delete")).click();
+    click(By.name("delete"));
   }
 
   public void selectGroup() {
-    wd.findElement(By.name("selected[]")).click();
+    click(By.name("selected[]"));
   }
 }
