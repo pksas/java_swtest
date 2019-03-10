@@ -6,7 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.ptf.addressbook.model.ContactData;
 
-public class ContactsCseationsTests {
+public class ContactsCreationsTests {
   private WebDriver wd;
 
   @BeforeClass(alwaysRun = true)
@@ -29,7 +29,7 @@ public class ContactsCseationsTests {
   }
 
   @Test
-  public void testContactsCseationsTests() throws Exception {
+  public void testContactsCreationsTests() throws Exception {
     gotoAddNewContactPage();
     fillContactForm(new ContactData("Ivanov", "Ivan", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru"));
     submitContactCreation();
@@ -41,7 +41,7 @@ public class ContactsCseationsTests {
   }
 
   private void submitContactCreation() {
-    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Notes:'])[1]/following::input[1]")).click();
+    wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
   private void fillContactForm(ContactData contactData) {
