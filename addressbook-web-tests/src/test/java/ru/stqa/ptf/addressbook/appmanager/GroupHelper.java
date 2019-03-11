@@ -11,19 +11,17 @@ public class GroupHelper extends HelperBase{
   }
 
   public void returntoGroupPage() {
-    click(By.linkText("Logout"));
+    click(By.linkText("group page"));
   }
 
   public void submitGroupCreation() {
-    click(By.linkText("group page"));
+    click(By.name("submit"));
   }
 
   public void fillGroupForm(GroupData groupData) {
     type(By.name("group_name"), groupData.getName());
     type(By.name("group_header"), groupData.getHeader());
     type(By.name("group_footer"), groupData.getFooter());
-    click(By.name("submit"));
-    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groups'])[1]/following::div[1]"));
   }
 
   public void initGroupCreation() {
