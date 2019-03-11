@@ -9,7 +9,7 @@ import ru.stqa.ptf.addressbook.model.ContactData;
 public class ContactsCreationsTests {
   private WebDriver wd;
 
-  @BeforeClass(alwaysRun = true)
+  @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -29,7 +29,7 @@ public class ContactsCreationsTests {
   }
 
   @Test
-  public void testContactsCreationsTests() throws Exception {
+  public void testContactsCreations() throws Exception {
     gotoAddNewContactPage();
     fillContactForm(new ContactData("Ivanov", "Ivan", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru"));
     submitContactCreation();
@@ -72,14 +72,9 @@ public class ContactsCreationsTests {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterClass(alwaysRun = true)
+  @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
-    logout();
     wd.quit();
-  }
-
-  private void logout() {
-    wd.findElement(By.linkText("Logout")).click();
   }
 
   private boolean isElementPresent(By by) {
