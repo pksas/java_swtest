@@ -40,6 +40,7 @@ public class ApplicationManager {
     }
   }
 
+
   public GroupHelper getGroupHelper() {
     return groupHelper;
   }
@@ -50,5 +51,9 @@ public class ApplicationManager {
 
   public ContactHelper getContactHelper() {
     return contactHelper;
+  }
+
+  public void acceptContactDeletion() {
+    wd.switchTo().alert().accept();
   }
 }
