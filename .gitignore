@@ -1,5 +1,5 @@
 .gradle
-/build/
+build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -18,3 +18,5 @@ addressbook-web-tests/.idea/workspace.xml
 addressbook-web-tests/.idea/workspace.xml
 addressbook-web-tests/.idea/workspace.xml___jb_tmp___
 addressbook-web-tests/.idea/workspace.xml
+addressbook-web-tests/.idea/workspace.xml
+sandbox/.idea/workspace.xml
