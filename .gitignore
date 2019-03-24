@@ -1,5 +1,5 @@
 .gradle
-/build/
+build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -18,10 +18,7 @@ addressbook-web-tests/.idea/workspace.xml
 addressbook-web-tests/.idea/workspace.xml
 addressbook-web-tests/.idea/workspace.xml___jb_tmp___
 addressbook-web-tests/.idea/workspace.xml
-<<<<<<< HEAD
 addressbook-web-tests/.idea/workspace.xml
 sandbox/.idea/workspace.xml
 addressbook-web-tests/.idea/workspace.xml
 sandbox/.idea/workspace.xml
-=======
->>>>>>> parent of 47ebe59... Изменение файла gitignore
