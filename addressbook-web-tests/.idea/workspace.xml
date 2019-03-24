@@ -3,6 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6d055255-981b-48e1-ad0b-f64b72e6faaa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../sandbox/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sandbox/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/classes/java/main/MyFirstProgram.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/classes/java/main/ru/stqa/swtest/sandbox/MyFirstProgram1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/distributions/sandbox.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/distributions/sandbox.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/libs/sandbox.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/scripts/sandbox" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/scripts/sandbox.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandbox/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -252,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553416467974" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553416778500" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sandbox" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
