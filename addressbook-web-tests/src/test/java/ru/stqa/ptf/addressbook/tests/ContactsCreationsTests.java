@@ -12,7 +12,7 @@ public class ContactsCreationsTests extends TestBase{
     int before = app.getContactHelper().getContactCount();
     app.getNavigationHelper().gotoAddNewContactPage();
     app.getContactHelper().createContact
-            (new ContactData("Ivanov", "Ivan", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru", "test1"));
+            (new ContactData("test1", "test2", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru", "test1"));
     app.getNavigationHelper().gotoHomePage();
     int after = app.getContactHelper().getContactCount();
     Assert.assertEquals(after, before + 1);
