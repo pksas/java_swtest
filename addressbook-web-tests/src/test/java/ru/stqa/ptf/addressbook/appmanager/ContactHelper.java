@@ -57,4 +57,12 @@ public class ContactHelper extends HelperBase{
     fillContactForm(contact, true);
     submitContactCreation();
   }
+
+  public int getContactCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
+
+  public void submitContactDelition() {
+    click(By.xpath("(//input[@name='update'])[3]"));
+  }
 }
