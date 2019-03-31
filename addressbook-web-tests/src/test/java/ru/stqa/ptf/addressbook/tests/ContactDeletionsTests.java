@@ -15,7 +15,15 @@ public class ContactDeletionsTests extends TestBase{
     if (app.contact().list().size() == 0) {
       app.goTo().addNewContactPage();
       app.contact().create
-              (new ContactData("Ivanov", "Ivan", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru", "test1"));
+              (new ContactData().
+                      withFirstname("Ivanov").
+                      withMiddlename("Ivan").
+                      withLastname("Ivanovich").
+                      withNickname("vano").
+                      withAddress("Ivanovo").
+                      withHomephonenumber("+7(111)2223344").
+                      withEmail("vano@mail.ru").
+                      withGroup("test1"));
       app.goTo().homePage();
     }
   }

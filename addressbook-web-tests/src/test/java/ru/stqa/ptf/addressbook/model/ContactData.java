@@ -3,42 +3,60 @@ package ru.stqa.ptf.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-  public void setId(int id) {
-    this.id = id;
-  }
 
-  private int id;
-  private final String firstname;
-  private final String middlename;
-  private final String lastname;
-  private final String nickname;
-  private final String address;
-  private final String homephonenumber;
-  private final String email;
+  private int id = Integer.MAX_VALUE;
+  private String firstname;
+  private String middlename;
+  private String lastname;
+  private String nickname;
+  private String address;
+  private String homephonenumber;
+  private String email;
   private String group;
 
-  public ContactData(int id, String firstname, String middlename, String lastname, String nickname, String address, String homephonenumber, String email, String group) {
+  public ContactData withId(int id) {
     this.id = id;
-    this.firstname = firstname;
-    this.middlename = middlename;
-    this.lastname = lastname;
-    this.nickname = nickname;
-    this.address = address;
-    this.homephonenumber = homephonenumber;
-    this.email = email;
-    this.group = group;
+    return this;
   }
 
-  public ContactData(String firstname, String middlename, String lastname, String nickname, String address, String homephonenumber, String email, String group) {
-    this.id = Integer.MAX_VALUE;
+  public ContactData  withFirstname(String firstname) {
     this.firstname = firstname;
+    return this;
+  }
+
+  public ContactData  withMiddlename(String middlename) {
     this.middlename = middlename;
+    return this;
+  }
+
+  public ContactData  withLastname(String lastname) {
     this.lastname = lastname;
+    return this;
+  }
+
+  public ContactData  withNickname(String nickname) {
     this.nickname = nickname;
+    return this;
+  }
+
+  public ContactData  withAddress(String address) {
     this.address = address;
+    return this;
+  }
+
+  public ContactData  withHomephonenumber(String homephonenumber) {
     this.homephonenumber = homephonenumber;
+    return this;
+  }
+
+  public ContactData  withEmail(String email) {
     this.email = email;
+    return this;
+  }
+
+  public ContactData  withGroup(String group) {
     this.group = group;
+    return this;
   }
 
   public int getId() {

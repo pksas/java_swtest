@@ -13,14 +13,22 @@ public class ContactsCreationsTests extends TestBase{
   public void testContactsCreations() throws Exception {
     app.goTo().homePage();
     List<ContactData> before = app.contact().list();
-    ContactData contact = new ContactData("test11", "test2", "Ivanovich", "vano", "Ivanovo", "+7(111)2223344", "vano@mail.ru", "test1");
+    ContactData contact =
+            new ContactData().
+                    withFirstname("test11").
+                    withMiddlename("test2").
+                    withLastname("Ivanovich").
+                    withNickname("vano").
+                    withAddress("Ivanovo").
+                    withHomephonenumber("+7(111)2223344").
+                    withEmail("vano@mail.ru").
+                    withGroup("test1");
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
     List<ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
-    contact.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(contact);
     Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
     before.sort(byId);
