@@ -33,7 +33,7 @@ public class ContactDeletionsTests extends TestBase{
   public void testContactDeletions() throws Exception {
     Contacts before = app.contact().all();
     ContactData deletedContact = before.iterator().next();
-    app.contact().deleteById(deletedContact);
+    app.contact().delete(deletedContact);
     app.goTo().homePage();
     Contacts after = app.contact().all();
     assertThat(after.size(), equalTo(before.size() - 1));
