@@ -26,11 +26,32 @@ public class ContactsCreationsTests extends TestBase{
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
+    assertThat(app.contact().count(), equalTo(before.size() + 1));
     Contacts after = app.contact().all();
-    assertThat(after.size(), equalTo(before.size() + 1));
-
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+  }
+
+  @Test
+  public void testBadContactsCreations() throws Exception {
+    app.goTo().homePage();
+    Contacts before = app.contact().all();
+    ContactData contact =
+            new ContactData().
+                    withFirstname("test11'").
+                    withMiddlename("test2").
+                    withLastname("Ivanovich").
+                    withNickname("vano").
+                    withAddress("Ivanovo").
+                    withHomephonenumber("+7(111)2223344").
+                    withEmail("vano@mail.ru").
+                    withGroup("test1");
+    app.goTo().addNewContactPage();
+    app.contact().create(contact);
+    app.goTo().homePage();
+    assertThat(app.contact().count(), equalTo(before.size()));
+    Contacts after = app.contact().all();
+    assertThat(after, equalTo(before));
   }
 
 }
