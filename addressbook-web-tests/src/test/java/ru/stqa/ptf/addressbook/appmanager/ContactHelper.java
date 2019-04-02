@@ -8,9 +8,7 @@ import org.testng.Assert;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.Contacts;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ContactHelper extends HelperBase{
   public ContactHelper(WebDriver wd) {
@@ -72,7 +70,7 @@ public class ContactHelper extends HelperBase{
 
   public void delete(ContactData contact) {
     initContactModificationById(contact.getId());
-    submitContactDelition();
+    submitContactDeletion();
     contactCache = null;
   }
 
@@ -80,7 +78,7 @@ public class ContactHelper extends HelperBase{
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public void submitContactDelition() {
+  public void submitContactDeletion() {
     click(By.xpath("(//input[@name='update'])[3]"));
     contactCache = null;
   }
@@ -93,20 +91,15 @@ public class ContactHelper extends HelperBase{
     }
 
     contactCache = new Contacts();
-    List<WebElement> elements = wd.findElements(By.tagName("td"));
-    for (int i = 0; i < elements.size(); i++) {
-      int id = Integer.parseInt(elements.get(i).findElement(By.tagName("input")).getAttribute("value"));
-      i++;
-      String lastname = elements.get(i).getText();
-      i++;
-      String firstname = elements.get(i).getText();
-      i++;
-      String address = elements.get(i).getText();
-      i++;
-      String email = elements.get(i + 1).getText();
-      i++;
-      String phonenumber = elements.get(i + 1).getText();
-      i = i + 4;
+    List<WebElement> elements = wd.findElements(By.name("entry"));
+    for (WebElement e : elements) {
+      List<WebElement> element = e.findElements(By.tagName("td"));
+      int id = Integer.parseInt(element.get(0).findElement(By.tagName("input")).getAttribute("value"));
+      String lastname = element.get(1).getText();
+      String firstname = element.get(2).getText();
+      String address = element.get(3).getText();
+      String email = element.get(4).getText();
+      String phonenumber = element.get(5).getText();
       contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname).withAddress(address).withHomephonenumber(phonenumber).withEmail(email));
     }
     return new Contacts(contactCache);
