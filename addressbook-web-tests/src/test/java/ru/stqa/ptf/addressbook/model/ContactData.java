@@ -17,9 +17,15 @@ public class ContactData {
   private String homephone;
   private String mobilephone;
   private String workphone;
+  private String secondaryPhone;
   private String email1;
   private String email2;
   private String email3;
+
+  public ContactData withSecondaryPhone(String secondaryPhone) {
+    this.secondaryPhone = secondaryPhone;
+    return this;
+  }
 
   public ContactData withEmail1(String email1) {
     this.email1 = email1;
@@ -155,6 +161,11 @@ public class ContactData {
   public String getEmail3() {
     return email3;
   }
+
+  public String getSecondaryPhone() {
+    return secondaryPhone;
+  }
+
 
   @Override
   public String toString() {
