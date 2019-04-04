@@ -1,6 +1,7 @@
 package ru.stqa.ptf.addressbook.model;
 
 import java.util.Objects;
+import java.util.PrimitiveIterator;
 
 public class ContactData {
 
@@ -11,11 +12,29 @@ public class ContactData {
   private String nickname;
   private String address;
   private String allphonenumbers;
-  private String email;
+  private String allEmails;
   private String group;
   private String homephone;
   private String mobilephone;
   private String workphone;
+  private String email1;
+  private String email2;
+  private String email3;
+
+  public ContactData withEmail1(String email1) {
+    this.email1 = email1;
+    return this;
+  }
+
+  public ContactData withEmail2(String email2) {
+    this.email2 = email2;
+    return this;
+  }
+
+  public ContactData withEmail3(String email3) {
+    this.email3 = email3;
+    return this;
+  }
 
   public ContactData withHomePhone(String homephone) {
     this.homephone = homephone;
@@ -67,8 +86,8 @@ public class ContactData {
     return this;
   }
 
-  public ContactData  withEmail(String email) {
-    this.email = email;
+  public ContactData withAllEmails(String email) {
+    this.allEmails = email;
     return this;
   }
 
@@ -117,12 +136,24 @@ public class ContactData {
     return workphone;
   }
 
-  public String getEmail() {
-    return email;
+  public String getAllEmails() {
+    return allEmails;
   }
 
   public String getGroup() {
     return group;
+  }
+
+  public String getEmail1() {
+    return email1;
+  }
+
+  public String getEmail2() {
+    return email2;
+  }
+
+  public String getEmail3() {
+    return email3;
   }
 
   @Override

@@ -21,7 +21,7 @@ public class ContactsCreationsTests extends TestBase{
                     withNickname("vano").
                     withAddress("Ivanovo").
                     withallphonenumbers("+7(111)2223344").
-                    withEmail("vano@mail.ru").
+                    withAllEmails("vano@mail.ru").
                     withGroup("test1");
     app.goTo().addNewContactPage();
     app.contact().create(contact);
@@ -44,7 +44,7 @@ public class ContactsCreationsTests extends TestBase{
                     withNickname("vano").
                     withAddress("Ivanovo").
                     withallphonenumbers("+7(111)2223344").
-                    withEmail("vano@mail.ru").
+                    withAllEmails("vano@mail.ru").
                     withGroup("test1");
     app.goTo().addNewContactPage();
     app.contact().create(contact);
