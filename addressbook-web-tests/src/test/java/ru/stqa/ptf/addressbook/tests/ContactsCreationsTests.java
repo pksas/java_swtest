@@ -20,7 +20,7 @@ public class ContactsCreationsTests extends TestBase{
                     withLastname("Ivanovich").
                     withNickname("vano").
                     withAddress("Ivanovo").
-                    withHomephonenumber("+7(111)2223344").
+                    withallphonenumbers("+7(111)2223344").
                     withEmail("vano@mail.ru").
                     withGroup("test1");
     app.goTo().addNewContactPage();
@@ -43,7 +43,7 @@ public class ContactsCreationsTests extends TestBase{
                     withLastname("Ivanovich").
                     withNickname("vano").
                     withAddress("Ivanovo").
-                    withHomephonenumber("+7(111)2223344").
+                    withallphonenumbers("+7(111)2223344").
                     withEmail("vano@mail.ru").
                     withGroup("test1");
     app.goTo().addNewContactPage();
