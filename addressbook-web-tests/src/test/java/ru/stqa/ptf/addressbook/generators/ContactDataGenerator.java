@@ -1,5 +1,7 @@
 package ru.stqa.ptf.addressbook.generators;
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.GroupData;
 
@@ -12,12 +14,22 @@ import java.util.List;
 
 public class ContactDataGenerator {
 
-  public static void main(String[] args) throws IOException {
-    int count = Integer.parseInt(args[0]);
-    File file = new File(args[1]);
+  @Parameter(names = "-c", description = "Contact count")
+  public int count;
 
+  @Parameter (names = "-f", description = "Target file")
+  public String file;
+
+  public static void main(String[] args) throws IOException {
+    ContactDataGenerator generator = new ContactDataGenerator();
+    JCommander.newBuilder().addObject(generator).build().parse(args);
+    generator.run();
+
+  }
+
+  private void run() throws IOException {
     List<ContactData> contacts = generateContacts(count);
-    save(contacts, file);
+    save(contacts, new File(file));
   }
 
   private static List<ContactData> generateContacts(int count) {
