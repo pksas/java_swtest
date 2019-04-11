@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.Contacts;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -16,15 +16,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ContactsCreationsTests extends TestBase{
 
   @DataProvider
-  public Iterator<Object[]> validContacts() {
+  public Iterator<Object[]> validContacts() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
-    list.add(new Object[] {new ContactData().withFirstname("firstname 1").withLastname("lastname 1").withMiddlename("middlename 1")
-            .withNickname("nickname 1").withHomePhone("11 01").withMobilePhone("22 01").withEmail1("1_1@m.ru").withEmail2("2_1@m.ru").withAddress("address 1")
-            .withPhoto( new File("src/test/resources/BeKind.png"))});
-    list.add(new Object[] {new ContactData().withFirstname("firstname 2").withLastname("lastname 2").withMiddlename("middlename 2")
-            .withNickname("nickname 2").withHomePhone("11 02").withMobilePhone("22 02").withEmail1("1_2@m.ru").withEmail2("2_2@m.ru").withAddress("address 2")});
-    list.add(new Object[] {new ContactData().withFirstname("firstname 3").withLastname("lastname 3").withMiddlename("middlename 3")
-            .withNickname("nickname 3").withHomePhone("11 03").withMobilePhone("22 03").withEmail1("1_3@m.ru").withEmail2("2_3@m.ru").withAddress("address 3")});
+    BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/contacts.csv"));
+    String line = reader.readLine();
+    while (line != null) {
+      String[] splt = line.split(";");
+      list.add(new Object[] {new ContactData().withFirstname(splt[0]).withLastname(splt[1]).withMiddlename(splt[2])
+              .withNickname(splt[3]).withHomePhone(splt[4]).withMobilePhone(splt[5]).withAddress(splt[6]).withEmail1(splt[7]).withEmail2(splt[8])});
+      line = reader.readLine();
+    }
     return list.iterator();
   }
 
