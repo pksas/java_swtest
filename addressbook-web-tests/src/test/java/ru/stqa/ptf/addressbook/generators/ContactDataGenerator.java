@@ -2,6 +2,8 @@ package ru.stqa.ptf.addressbook.generators;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.GroupData;
@@ -35,12 +37,21 @@ public class ContactDataGenerator {
     List<ContactData> contacts = generateContacts(count);
     if (format.equals("csv")) {
       saveAsCsv(contacts, new File(file));
-    }  else if (format.equals("xml")) {
+    } else if (format.equals("xml")) {
       saveAsXml(contacts, new File(file));
-    }
-    else {
+    } else if (format.equals("json")) {
+      saveAsJson(contacts, new File(file));
+    } else {
       System.out.println("Unrecognized format " + format);
     }
+  }
+
+  private void saveAsJson(List<ContactData> contacts, File file) throws IOException {
+    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+    String json = gson.toJson(contacts);
+    Writer writer = new FileWriter(file);
+    writer.write(json);
+    writer.close();
   }
 
   private void saveAsXml(List<ContactData> contacts, File file) throws IOException {
