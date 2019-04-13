@@ -61,10 +61,12 @@ public class ContactData {
   @Type(type = "text")
   private String mobilephone;
 
+  @Expose
   @Column(name = "work")
   @Type(type = "text")
   private String workphone;
 
+  @Expose
   @Column(name = "phone2")
   @Type(type = "text")
   private String secondaryPhone;
@@ -79,6 +81,7 @@ public class ContactData {
   @Type(type = "text")
   private String email2;
 
+  @Expose
   @Column(name = "email3")
   @Type(type = "text")
   private String email3;
@@ -248,13 +251,22 @@ public class ContactData {
     ContactData that = (ContactData) o;
     return id == that.id &&
             Objects.equals(firstname, that.firstname) &&
+            Objects.equals(middlename, that.middlename) &&
             Objects.equals(lastname, that.lastname) &&
-            Objects.equals(address, that.address);
+            Objects.equals(nickname, that.nickname) &&
+            Objects.equals(address, that.address) &&
+            Objects.equals(homephone, that.homephone) &&
+            Objects.equals(mobilephone, that.mobilephone) &&
+            Objects.equals(workphone, that.workphone) &&
+            Objects.equals(secondaryPhone, that.secondaryPhone) &&
+            Objects.equals(email1, that.email1) &&
+            Objects.equals(email2, that.email2) &&
+            Objects.equals(email3, that.email3);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstname, lastname, address);
+    return Objects.hash(id, firstname, middlename, lastname, nickname, address, homephone, mobilephone, workphone, secondaryPhone, email1, email2, email3);
   }
 
   @Override
@@ -262,8 +274,17 @@ public class ContactData {
     return "ContactData{" +
             "id=" + id +
             ", firstname='" + firstname + '\'' +
+            ", middlename='" + middlename + '\'' +
             ", lastname='" + lastname + '\'' +
+            ", nickname='" + nickname + '\'' +
             ", address='" + address + '\'' +
+            ", homephone='" + homephone + '\'' +
+            ", mobilephone='" + mobilephone + '\'' +
+            ", workphone='" + workphone + '\'' +
+            ", secondaryPhone='" + secondaryPhone + '\'' +
+            ", email1='" + email1 + '\'' +
+            ", email2='" + email2 + '\'' +
+            ", email3='" + email3 + '\'' +
             '}';
   }
 

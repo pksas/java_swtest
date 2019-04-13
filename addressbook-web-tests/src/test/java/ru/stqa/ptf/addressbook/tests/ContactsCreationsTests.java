@@ -48,42 +48,47 @@ public class ContactsCreationsTests extends TestBase{
       }
       Gson gson = new Gson();
       List<ContactData> contacts = gson.fromJson(json, new TypeToken<List<ContactData>>() {}.getType()); //List<ContactData>.class
-      return contacts.stream().map((c) -> new Object[] {c}).collect(Collectors.toList()).iterator();
+      return contacts.stream().map((c) -> new Object[] {c.withPhoto(new File("src/test/resources/BeKind.png"))}).collect(Collectors.toList()).iterator();
     }
   }
 
   @Test (dataProvider = "validContactsFromJson")
   public void testContactsCreations(ContactData contact) throws Exception {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
     assertThat(app.contact().count(), equalTo(before.size() + 1));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }
 
   @Test
   public void testBadContactsCreations() throws Exception {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     ContactData contact =
             new ContactData().
-                    withFirstname("test11'").
-                    withMiddlename("test2").
-                    withLastname("Ivanovich").
-                    withNickname("vano").
-                    withAddress("Ivanovo").
-                    withallphonenumbers("+7(111)2223344").
-                    withAllEmails("vano@mail.ru").
-                    withGroup("test1");
+                    withFirstname("badtest'").
+                    withMiddlename("badtest").
+                    withLastname("badtest").
+                    withNickname("badtest").
+                    withAddress("badtest").
+                    withHomePhone("999 999").
+                    withMobilePhone("888 888").
+                    withWorkPhone("777 777").
+                    withSecondaryPhone("666 666").
+                    withEmail1("formode1@mail.ru").
+                    withEmail2("formode2@mail.ru").
+                    withEmail3("formode3@mail.ru").
+                    withPhoto(new File("src/test/resources/BeKind.png"));
     app.goTo().addNewContactPage();
     app.contact().create(contact);
     app.goTo().homePage();
     assertThat(app.contact().count(), equalTo(before.size()));
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
   }
 

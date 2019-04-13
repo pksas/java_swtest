@@ -7,8 +7,11 @@
     "address": "address 0",
     "homephone": "11 11 0",
     "mobilephone": "22 22 0",
+    "workphone": "33 33 0",
+    "secondaryPhone": "44 44 0",
     "email1": "email0@test1.com",
-    "email2": "email0@test2.com"
+    "email2": "email0@test2.com",
+    "email3": "email0@test3.com"
   },
   {
     "firstname": "firstname 1",
@@ -18,8 +21,11 @@
     "address": "address 1",
     "homephone": "11 11 1",
     "mobilephone": "22 22 1",
+    "workphone": "33 33 1",
+    "secondaryPhone": "44 44 1",
     "email1": "email1@test1.com",
-    "email2": "email1@test2.com"
+    "email2": "email1@test2.com",
+    "email3": "email1@test3.com"
   },
   {
     "firstname": "firstname 2",
@@ -29,7 +35,10 @@
     "address": "address 2",
     "homephone": "11 11 2",
     "mobilephone": "22 22 2",
+    "workphone": "33 33 2",
+    "secondaryPhone": "44 44 2",
     "email1": "email2@test1.com",
-    "email2": "email2@test2.com"
+    "email2": "email2@test2.com",
+    "email3": "email2@test3.com"
   }
 ]
