@@ -3,44 +3,92 @@ package ru.stqa.ptf.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 import java.util.PrimitiveIterator;
 
+
+@Entity
+@Table(name = "addressbook")
 @XStreamAlias("contact")
 public class ContactData {
 
   @XStreamOmitField
+  @Id
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
+
   @Expose
+  @Column(name = "firstname")
   private String firstname;
+
   @Expose
+  @Column(name = "middlename")
   private String middlename;
+
   @Expose
+  @Column(name = "lastname")
   private String lastname;
+
   @Expose
+  @Column(name = "nickname")
   private String nickname;
+
   @Expose
+  @Column(name = "address")
+  @Type(type = "text")
   private String address;
+
+  @Transient
   private String allphonenumbers;
+
+  @Transient
   private String allEmails;
+
+  @Transient
   private String group;
+
   @Expose
+  @Column(name = "home")
+  @Type(type = "text")
   private String homephone;
+
   @Expose
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String mobilephone;
+
+  @Column(name = "work")
+  @Type(type = "text")
   private String workphone;
+
+  @Column(name = "phone2")
+  @Type(type = "text")
   private String secondaryPhone;
+
   @Expose
+  @Column(name = "email")
+  @Type(type = "text")
   private String email1;
+
   @Expose
+  @Column(name = "email2")
+  @Type(type = "text")
   private String email2;
+
+  @Column(name = "email3")
+  @Type(type = "text")
   private String email3;
-  private File photo;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
 
   public ContactData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
@@ -125,7 +173,7 @@ public class ContactData {
   }
 
   public File getPhoto() {
-    return photo;
+    return new File(photo);
   }
 
   public int getId() {

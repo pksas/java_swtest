@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97063a55-c2cd-4219-8911-5bcba246ddbe" name="Default Changelist" comment="" />
+    <list default="true" id="97063a55-c2cd-4219-8911-5bcba246ddbe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,61 +32,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            <state relative-caret-position="266">
+              <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/GroupCreationsTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/TestBase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
+            <state relative-caret-position="510">
+              <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test-20190413T100752.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test-20190413T100459.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/logback.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/ContactsCreationsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state relative-caret-position="391">
+              <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="442">
+              <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1385#1472#0" />
               </folding>
             </state>
           </provider>
@@ -91,30 +84,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/GroupData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state relative-caret-position="153">
+              <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1293#1294#0" expanded="true" />
-                <element signature="e#1317#1318#0" expanded="true" />
-                <element signature="e#1336#1337#0" expanded="true" />
-                <element signature="e#1367#1368#0" expanded="true" />
-                <element signature="e#1390#1391#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
-                <element signature="e#1444#1445#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -149,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/appmanager/ContactHelper.java" />
         <option value="$PROJECT_DIR$/src/test/resources/groups.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/contacts.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/generators/GroupDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/generators/ContactDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
@@ -158,14 +131,15 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/ContactsCreationsTests.java" />
         <option value="$PROJECT_DIR$/src/test/resources/local.properties" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/appmanager/ApplicationManager.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/DbConnectionTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/GroupData.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/GroupCreationsTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/TestBase.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java" />
       </list>
     </option>
   </component>
@@ -267,7 +241,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555139777908" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555146360903" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../sandbox" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -287,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.HbConnectionTest.testHbConnection">
+  <component name="RunManager" selected="TestNG.ContactsCreationsTests.testContactsCreations">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.ptf.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -312,16 +286,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="C:/Users/Евгений/Documents/GitHub/java_swtest/addressbook-web-tests/src/test/resources/testng-groups.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng-groups.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -387,6 +351,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.stqa.ptf.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="ru.stqa.ptf.addressbook.tests.ContactPhoneTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactsCreationsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.ptf.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.ptf.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.ptf.addressbook.tests.ContactsCreationsTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -535,19 +516,19 @@
       <item itemvalue="TestNG.ContactsCreationsTests.testContactsCreations" />
       <item itemvalue="TestNG.ContactDeletionsTests" />
       <item itemvalue="TestNG.GroupCreationsTests" />
-      <item itemvalue="TestNG.C:/Users/Евгений/Documents/GitHub/java_swtest/addressbook-web-tests/src/test/resources/testng-groups.xml" />
       <item itemvalue="TestNG.DbConnectionTest" />
       <item itemvalue="TestNG.DbConnectionTest.testDbConnection" />
       <item itemvalue="TestNG.HbConnectionTest" />
       <item itemvalue="TestNG.HbConnectionTest.testHbConnection" />
+      <item itemvalue="TestNG.ContactsCreationsTests" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.HbConnectionTest.testHbConnection" />
+        <item itemvalue="TestNG.ContactsCreationsTests" />
         <item itemvalue="TestNG.HbConnectionTest" />
         <item itemvalue="TestNG.DbConnectionTest.testDbConnection" />
         <item itemvalue="TestNG.DbConnectionTest" />
-        <item itemvalue="TestNG.C:/Users/Евгений/Documents/GitHub/java_swtest/addressbook-web-tests/src/test/resources/testng-groups.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -565,35 +546,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.12 at 23h 03m 32s.xml">
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 52m 11s.xml">
       <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HbConnectionTest - 2019.04.12 at 23h 07m 08s.xml">
-      <configuration name="HbConnectionTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.12 at 23h 08m 00s.xml">
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 53m 56s.xml">
       <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 09h 18m 12s.xml">
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 54m 34s.xml">
       <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 09h 24m 48s.xml">
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 55m 02s.xml">
       <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 09h 26m 49s.xml">
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 56m 47s.xml">
       <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationsTests_testGroupCreations - 2019.04.13 at 09h 49m 42s.xml">
-      <configuration name="GroupCreationsTests.testGroupCreations" configurationId="TestNG" />
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 11h 57m 19s.xml">
+      <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationsTests_testGroupCreations - 2019.04.13 at 09h 57m 26s.xml">
-      <configuration name="GroupCreationsTests.testGroupCreations" configurationId="TestNG" />
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 12h 01m 55s.xml">
+      <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationsTests_testGroupCreations - 2019.04.13 at 10h 05m 13s.xml">
-      <configuration name="GroupCreationsTests.testGroupCreations" configurationId="TestNG" />
+    <history-entry file="ContactsCreationsTests - 2019.04.13 at 12h 02m 42s.xml">
+      <configuration name="ContactsCreationsTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GroupCreationsTests_testGroupCreations - 2019.04.13 at 10h 08m 05s.xml">
-      <configuration name="GroupCreationsTests.testGroupCreations" configurationId="TestNG" />
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 12h 04m 08s.xml">
+      <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_testHbConnection - 2019.04.13 at 12h 04m 43s.xml">
+      <configuration name="HbConnectionTest.testHbConnection" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -874,20 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
-            <element signature="e#2467#2468#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3886#3887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/groups.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -936,13 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/ContactsCreationsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta3/26002157600abfaa1060ca485c43aef748b6b659/testng-7.0.0-beta3-sources.jar!/org/testng/internal/ConfigInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4760">
@@ -977,58 +937,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/GroupData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test-20190413T095712.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/test-20190413T101312.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="48" lean-forward="true" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/GroupCreationsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/test-20190413T101622.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test-20190413T100459.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-20190413T100752.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/TestBase.java">
@@ -1043,16 +975,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test-20190413T100752.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/GroupCreationsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="425">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/GroupData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" selection-start-line="18" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/model/ContactData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1385#1472#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/HbConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="86" selection-start-line="39" selection-start-column="86" selection-end-line="39" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/ContactsCreationsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
         </state>
       </provider>
     </entry>
