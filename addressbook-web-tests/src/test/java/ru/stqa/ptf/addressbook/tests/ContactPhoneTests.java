@@ -25,8 +25,7 @@ public class ContactPhoneTests extends TestBase {
                       withNickname("vano").
                       withAddress("Ivanovo").
                       withallphonenumbers("+7(111)2223344").
-                      withAllEmails("vano@mail.ru").
-                      withGroup("test1"));
+                      withAllEmails("vano@mail.ru"));
       app.goTo().homePage();
     }
   }

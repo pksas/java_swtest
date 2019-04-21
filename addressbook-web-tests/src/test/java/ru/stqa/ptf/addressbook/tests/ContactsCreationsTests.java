@@ -3,11 +3,13 @@ package ru.stqa.ptf.addressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.ptf.addressbook.model.ContactData;
 import ru.stqa.ptf.addressbook.model.Contacts;
 import ru.stqa.ptf.addressbook.model.GroupData;
+import ru.stqa.ptf.addressbook.model.Groups;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -20,6 +22,14 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactsCreationsTests extends TestBase{
+
+  @BeforeMethod
+  public void ensurePreconditions() {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("test1"));
+    }
+  }
 
   @DataProvider
   public Iterator<Object[]> validContactsFromXml() throws IOException {
@@ -68,6 +78,7 @@ public class ContactsCreationsTests extends TestBase{
 
   @Test
   public void testBadContactsCreations() throws Exception {
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
     app.goTo().homePage();
     ContactData contact =
@@ -84,6 +95,7 @@ public class ContactsCreationsTests extends TestBase{
                     withEmail1("formode1@mail.ru").
                     withEmail2("formode2@mail.ru").
                     withEmail3("formode3@mail.ru").
+                    inGroup(groups.iterator().next()).
                     withPhoto(new File("src/test/resources/BeKind.png"));
     app.goTo().addNewContactPage();
     app.contact().create(contact);
