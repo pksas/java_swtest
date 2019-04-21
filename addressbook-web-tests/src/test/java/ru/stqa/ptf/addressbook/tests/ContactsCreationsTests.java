@@ -63,6 +63,7 @@ public class ContactsCreationsTests extends TestBase{
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+    verifyContactsInUI();
   }
 
   @Test
@@ -90,6 +91,7 @@ public class ContactsCreationsTests extends TestBase{
     assertThat(app.contact().count(), equalTo(before.size()));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
+    verifyContactsInUI();
   }
 
 }
