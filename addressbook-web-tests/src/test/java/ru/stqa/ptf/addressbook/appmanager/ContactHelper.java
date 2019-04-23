@@ -130,9 +130,20 @@ public class ContactHelper extends HelperBase{
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work).withEmail1(email1).withEmail2(email2).withEmail3(email3);
   }
 
-  public void addContactInGroup(int contactId, int groupId) {
+  public void addContactInGroupByIds(int contactId, int groupId) {
     wd.findElement(By.cssSelector("input[value='" + contactId + "']")).click();
     wd.findElement(By.name("to_group")).findElement(By.cssSelector("option[value='" + groupId + "']")).click();
     wd.findElement(By.name("add")).click();
+  }
+
+  public void addContactInGroup() {
+    wd.findElement(By.name("selected[]")).click();
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void removeContactFromGroup(int contactId, int groupId) {
+    wd.findElement(By.name("group")).findElement(By.cssSelector("option[value='" + groupId + "']")).click();
+    wd.findElement(By.cssSelector("input[value='" + contactId + "']")).click();
+    wd.findElement(By.name("remove")).click();
   }
 }
