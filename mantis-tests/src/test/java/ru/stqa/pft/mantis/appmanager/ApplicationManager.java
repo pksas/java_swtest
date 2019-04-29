@@ -1,7 +1,5 @@
 package ru.stqa.pft.mantis.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,7 +11,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.MatchResult;
 
 public class ApplicationManager {
 
@@ -24,6 +21,9 @@ public class ApplicationManager {
   private FtpHelper ftp;
   private MailHelper mailHelper;
   private JamesHelper jamesHelper;
+  private DbHelper dbHelper;
+  private SessionHelper sessionHelper;
+  private UsersManagerHelper usersManagerHelper;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -31,6 +31,7 @@ public class ApplicationManager {
   }
 
   public void init() throws IOException {
+    dbHelper = new DbHelper();
     String target = System.getProperty("target", "local");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
 
@@ -92,4 +93,22 @@ public class ApplicationManager {
     }
     return jamesHelper;
   }
+
+  public DbHelper db() {
+    return dbHelper;
+  }
+
+  public UsersManagerHelper usermanager() {
+    if (usersManagerHelper == null) {
+      usersManagerHelper = new UsersManagerHelper(this);
+    }
+    return usersManagerHelper;
+  }
+  public SessionHelper lifeSession() {
+    if (sessionHelper == null) {
+      sessionHelper = new SessionHelper(this);
+    }
+    return sessionHelper;
+  }
+
 }

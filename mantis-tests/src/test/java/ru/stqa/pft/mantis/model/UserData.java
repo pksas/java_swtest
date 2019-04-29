@@ -18,6 +18,18 @@ public class UserData {
   @Column (name = "email")
   private String email;
 
+  @Column (name = "password")
+  private String password;
+
+  public String getPassword() {
+    return password;
+  }
+
+  public UserData withPassword(String password) {
+    this.password = password;
+    return this;
+  }
+
   public int getId() {
     return id;
   }
