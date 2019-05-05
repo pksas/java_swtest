@@ -17,6 +17,7 @@ dependencies {
     implementation 'mysql:mysql-connector-java:8.0.15'
     implementation 'org.hibernate:hibernate-core:5.1.17.Final'
     implementation 'ch.qos.logback:logback-classic:1.3.0-alpha4'
+    implementation 'biz.futureware.mantis:mantis-axis-soap-client:1.2.19'
 }
 
 test {
