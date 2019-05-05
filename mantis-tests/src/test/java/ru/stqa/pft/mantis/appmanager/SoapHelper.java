@@ -58,7 +58,6 @@ public class SoapHelper {
     if (status.equals("closed")) {
       openFlag = false;
     }
-    System.out.println(openFlag);
     return openFlag;
   }
 }
