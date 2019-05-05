@@ -49,4 +49,16 @@ public class SoapHelper {
             .withProject(new Project().withId(createdIssueData.getProject().getId().intValue())
                                       .withName(createdIssueData.getProject().getName()));
   }
+
+  public boolean openIssueFlag(int issueId) throws MalformedURLException, ServiceException, RemoteException {
+    MantisConnectPortType mc = getMantisConnect();
+    IssueData issueData = mc.mc_issue_get("administrator", "root1", BigInteger.valueOf(issueId));
+    String status = issueData.getStatus().getName();
+    boolean openFlag = true;
+    if (status.equals("closed")) {
+      openFlag = false;
+    }
+    System.out.println(openFlag);
+    return openFlag;
+  }
 }
