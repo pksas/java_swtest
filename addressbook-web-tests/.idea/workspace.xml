@@ -90,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="27" column="122" selection-start-line="27" selection-start-column="122" selection-end-line="27" selection-end-column="122" />
+              <caret line="27" column="121" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -1214,7 +1214,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/ptf/addressbook/tests/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="27" column="122" selection-start-line="27" selection-start-column="122" selection-end-line="27" selection-end-column="122" />
+          <caret line="27" column="121" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
         </state>
       </provider>
     </entry>
