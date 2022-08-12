@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "ru.stqa.swtest.sandbox.MyFirstProgram"
+mainClassName = "ru.stqa.swtest.sandbox.MyFirstLessonTask"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.0.0-beta3'
+}
+
+test {
+    useTestNG()
+}
